@@ -11,29 +11,29 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Tutorial
 
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+A Flutter package tutorial guide user in the application  
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+```flutter
+    //Configuration for the tutorial
+    TutorialService.init(padding: const EdgeInsets.all(12),);
 
-```dart
-const like = 'sample';
+    //Add the tutorial widget to the widget tree
+    TutorialService.startTutorial(context);
+    
+    //Add the tutorial to widget you want to show
+    Tutorial(
+        builder: (context, key) {
+        return Text(
+                key: key,
+                'You have pushed the button this many times:',
+            );
+        },
+        order: 1,
+        instruction: 'This is a text field',
+        category: 'home',
+    ),
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
